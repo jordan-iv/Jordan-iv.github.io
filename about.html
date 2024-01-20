@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivy's Portfolio Website</title>
+    <link rel="stylesheet" href="stylessheet.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yvg2rak.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <a href="index.html" class="home-link">Ivionna Jordan</a>
+            </div>
+            <div class="right"> </div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="/Users/ivionnajordan/artg2223/Jordan-I-Resume.pdf">Resume</a></li>
+                <li><a href="contact.html">Contact Me</a></li> `
+            </ul>
+        </nav>
+    </header>
+
+    <!--------------- About Section ------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="body shot.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I'm Ivy Jordan, and I'm currently a second year at Northeastern University located in
+                        Boston, Massachusetts! My academic journey revolves around Computer Science and Design, where I
+                        am interested in the areas of UX/UI Design, Product Management, and Web
+                        Design. I thrive on developing my skills and trying various things not only in academia, but in
+                        my
+                        everyday life as well. Currently, I am looking for my first co-op, which is scheduled for the
+                        fall of 2024.
+                    <p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Langauges</span><br> Java, R, HTML/CSS, JavaScript, Racket</li>
+                            <li><span>Developer Tools</span><br> VS Code, Eclipse, LaTeX, IntelliJ IDEA, Overleaf</li>
+                            <li><span>Design and Prototyping Tools</span><br> Adobe Creative Suite, Axure RP, Balsamiq,
+                                Figma, LucidChart,
+                                Notion, Whimsical</li>
+                                <li><span>Technologies/Frameworks</span><br>Microsoft 365, Google Suite, Linux Ubuntu, GitHub, RStudio, SPSS, macOS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Northeastern University</span><br>Relevant Coursework: Fundamentals of Computer
+                                Science I & II, Object-Oriented Design, Discrete Structures, Algorithims and Data,
+                                Foundations of Cybsersecurity, User Experience Design, Experience and Interaction, etc.
+                                <br><br>Extracurricular Activities: Kalediscope - Khoury's Club Council, Khoury FIRST,
+                                Club Fencing, Colorstack, Rewriting The Code, and NEU Downhillers Ski and Snowboard Club
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Campus Leader at Notion</span><br> Sepetmeber 2023 - Current</li>
+                            <li><span>Dean's Assistant at the College of Engineering - Northeastern
+                                    University</span><br> Sepetmeber 2023 - Current</li>
+                            <li><span>Office Assistant at the College of Engineering - Northeastern
+                                    University</span><br> September 2022 - August 2023</li>
+                            <li><span>Lead Peer Mentor at Khoury College of Computer Sciences - Northeastern
+                                    University</span><br> June 2023 - August 2023</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <p>Outside of classes, I enjoy doing a lot of extracuricuar activites! I currently serve as
+                                the
+                                Community Director for Kaleidoscope - Khoury College's Club Council. Recently, I joined
+                                the
+                                club fencing team at Northeastern University, where I fence foil. Outside of
+                                Northeastern, I
+                                like to hang out with my friends, go skiing and snowboarding on the weekends, and watch
+                                reruns of survivor!
+                            <p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    window.addEventListener('load', function () {
+        document.querySelector('header').classList.add('loaded');
+    });
+</script>
+
+</html>
