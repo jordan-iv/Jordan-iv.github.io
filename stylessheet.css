@@ -17,7 +17,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   body {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 15px; /* Adjust font size for smaller screens */
   }
 
   /* Add more styles specific to smaller screens if needed */
