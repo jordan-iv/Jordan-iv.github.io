@@ -343,30 +343,6 @@ main hr {
     margin-left: -50px;
 }
 
-/*--------- Contact Section ------------*/
-.contact-left {
-    flex: 1;
-    padding: 50px 60px;
-}
-
-.contact-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 40px;
-}
-
-.contact-left p {
-    margin-top: 30px;
-}
-
-.contact-left p i {
-    color: #345830;
-    margin-right: 15px;
-    font-size: 25px;
-}
-
 .social-icons {
     margin-top: 30px;
 }
@@ -400,7 +376,7 @@ main hr {
     text-align: center;
 }
 
-/* Footer styling */
+/* ---- Footer styling ----- */
 footer {
     text-align: center; 
     width: 100%;
