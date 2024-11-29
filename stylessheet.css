@@ -8,6 +8,10 @@ body {
     background: white;
     font-family: bely;
     color: #345830;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .scroll {
@@ -17,16 +21,11 @@ body {
 
 @media only screen and (max-width: 600px) {
   body {
-    font-size: 15px; /* Adjust font size for smaller screens */
+    font-size: 15px; 
   }
-
-  /* Add more styles specific to smaller screens if needed */
 }
 
-/* Media query for devices with a minimum width of 601 pixels (e.g., tablets and larger) */
-
 @media only screen and (min-width: 601px) {
-  /* Add styles for larger screens */
 }
 
 
@@ -78,6 +77,10 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
     font-size: 1.05rem;
+}
+
+main {
+    flex: 1;
 }
 
 main hr {
@@ -206,6 +209,54 @@ main hr {
     flex-wrap: wrap;
 }
 
+/* Slide-in animation */
+@keyframes slide-in-fwd {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide-out animation */
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+#photo-slideshow {
+    position: relative;
+    width: 100%;
+    height: 525px; 
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: slide-in-fwd 1s ease forwards, slide-out 1s ease 4s forwards;
+    display: none; 
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 .about-col-1 {
     flex-basis: 30%;
     padding: 20px;
@@ -213,12 +264,10 @@ main hr {
 
 .about-col-1 img {
     width: 100%;
+    height: 100%; 
+    max-height: 500px;
+    object-fit: cover;
     border-radius: 15px;
-    transition: transform 0.5s ease;
-}
-
-.about-col-1 img:hover {
-    transform: scale(1.1);
 }
 
 .about-col-2 {
@@ -336,42 +385,6 @@ main hr {
     transform: translateY(-5px);
 }
 
-.submit {
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 2px solid #1E3F20;
-    padding: 14px 25px;
-    border-radius: 6px;
-    text-decoration: none;
-    background: #DCEDB9;
-    color: #345830;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.submit.btn {
-    display: inline-block;
-    background: #DCEDB9;
-}
-
-.contact-right form {
-    width: 100%;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #DCEDB9;
-    padding: 15px;
-    margin: 15px;
-    color: rgb(159, 90, 0);
-    font-size: 20px;
-    border-radius: 6px;
-}
-
 /* ----- Projects Page -----*/
 
 .construction-message {
@@ -385,4 +398,17 @@ form textarea {
 .construction-text {
     color: #666;
     text-align: center;
+}
+
+/* Footer styling */
+footer {
+    text-align: center; 
+    width: 100%;
+    border-top: 1px solid #345830; /* Green line at the top of the footer */
+}
+
+footer a {
+    margin: 0 25px;
+    color: #345830; 
+    text-decoration: none;
 }

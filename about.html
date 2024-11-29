@@ -7,7 +7,6 @@
     <title>Ivy's Portfolio Website</title>
     <link rel="stylesheet" href="stylessheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/yvg2rak.css">
-
 </head>
 
 <body>
@@ -31,14 +30,39 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="body shot.png">
+                    <div id="photo-slideshow">
+                        <div class="slide">
+                            <img src="body shot.png">
+                        </div>
+                        <div class="slide">
+                            <img src="belgium.jpeg" alt="Study abroad in Leuven, Belgium">
+                            <div class="caption">Study abroad in Leuven, Belgium</div>
+                        </div>
+                        <div class="slide">
+                            <img src="f1.jpeg" alt="F1 at the Circuit of the Americas - 2024">
+                            <div class="caption">F1 at the Circuit of the Americas - 2024</div>
+                        </div>
+                        <div class="slide">
+                            <img src="fencing.jpeg" alt="Nationals Foil Fencing Team at Northeastern">
+                            <div class="caption">Nationals Foil Fencing Team at Northeastern</div>
+                        </div>
+                        <div class="slide">
+                            <img src="snowboarding.jpeg" alt="Snowboarding in Quebec, Canada">
+                            <div class="caption">Snowboarding at Mount Tremblant in Canada</div>
+                        </div>
+                        <div class="slide">
+                            <img src="jersey.jpeg" alt="Summer break on the Jersey Shore">
+                            <div class="caption">Summer break on the Jersey Shore</div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Hello! I'm Ivy Jordan, and I'm currently a third year at Northeastern University in
+                    <p>Hi there! I'm Ivy Jordan, and I'm currently a third year at Northeastern University in
                         Boston, Massachusetts. My academic journey revolves around Computer Science and Design, where I
                         am interested in the areas of Information and Database Design, Human Computer Interaction, and Web
-                        Design. I thrive on developing my skills and trying various things not only in academia, but in
+                        Design. Here you can read about some of my skill and interests and how I thrive on developing my skills by trying various things not only in academia, but in
                         my
                         everyday life as well. 
                     <p>
@@ -50,12 +74,12 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Langauges</span><br> Java, R, HTML/CSS, JavaScript, MySQL, Dr.Racket</li>
+                            <li><span>Langauges</span><br> Java, R, HTML/CSS, JavaScript, MySQL, Python</li>
                             <li><span>Developer Tools</span><br> VS Code, Eclipse, LaTeX, IntelliJ IDEA, Overleaf</li>
                             <li><span>Design and Prototyping Tools</span><br> Adobe Creative Suite, Axure RP, Figma,
                                 LucidChart,
                                 Notion</li>
-                                <li><span>Technologies/Frameworks</span><br>Microsoft 365, Google Suite, Linux Ubuntu, GitHub, RStudio, SPSS, Windows 10/11 ,macOS</li>
+                                <li><span>Technologies/Frameworks</span><br>Microsoft 365, Linux Ubuntu, GitHub, RStudio, SPSS, Windows 10/11 ,macOS</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
@@ -70,13 +94,12 @@
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
+                            <li><span>O365 Cloud Engineer at Coverys</span><br> July 2024 - Current</li>
                             <li><span>Campus Leader at Notion</span><br> Sepetmeber 2023 - Sepetmeber 2024</li>
                             <li><span>Dean's Assistant at the College of Engineering - Northeastern
                                     University</span><br> Sepetmeber 2023 - April 2024</li>
                             <li><span>Office Assistant at the College of Engineering - Northeastern
                                     University</span><br> September 2022 - August 2023</li>
-                            <li><span>Lead Peer Mentor at Khoury College of Computer Sciences - Northeastern
-                                    University</span><br> June 2023 - August 2023</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="interests">
@@ -96,6 +119,7 @@
         </div>
 
 </body> 
+
 <script>
 
     var tablinks = document.getElementsByClassName("tab-links");
@@ -111,12 +135,30 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 
-</script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('#photo-slideshow .slide');
+    let currentSlide = 0;
 
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+    setInterval(nextSlide, 7000);
+});
+
+</script>
 <script>
     window.addEventListener('load', function () {
         document.querySelector('header').classList.add('loaded');
     });
 </script>
-
 </html>
