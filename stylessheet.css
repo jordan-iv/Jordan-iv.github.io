@@ -376,6 +376,22 @@ main hr {
     text-align: center;
 }
 
+.project-name {
+    color: #345830;
+    font-size: 46px;
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    text-align: center;
+}
+
+.project-description {
+    color: #010101;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    text-align: center;
+}
+
 /* ---- Footer styling ----- */
 footer {
     text-align: center; 
