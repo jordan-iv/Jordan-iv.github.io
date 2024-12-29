@@ -39,7 +39,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 90px;
+    height: 100px;
     background-color: #DCEDB9;
 }
 
@@ -437,8 +437,4 @@ footer-about {
     color: #345830;
     text-align: center;
     margin-top: 20px;
-}
-
-footer .right a {
-    margin: 0 25px;
 }
