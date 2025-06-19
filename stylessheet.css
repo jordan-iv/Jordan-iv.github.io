@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    margin: 0%;
+    /*margin: 0%;*/
 }
 
 html,body {
@@ -87,8 +87,6 @@ main {
 
 main hr {
     border: 0;
-    background-color: #345830;
-    height: 1.3px;
 }
 
 header {
@@ -109,10 +107,6 @@ header::after {
 
 /*--------- Left section of the website screen with buttons ------------*/
 
-/*.left {
-    font-size: 1.5rem;
-}
-*/
 .first-section {
     display: flex;
     justify-content: space-around;
@@ -421,7 +415,6 @@ header::after {
 /* ---- Footer styling on index ----- */
 footer {
     background-color: #DCEDB9;
-    color: #345830;
     text-align: center;
 }
 
@@ -432,7 +425,6 @@ footer .right a {
 /* ---- Footer styling on about ----- */
 footer-about {
     background-color: #DCEDB9;
-    color: #345830;
     text-align: center;
     margin-top: 20px;
 }
