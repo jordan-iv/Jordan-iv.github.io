@@ -435,3 +435,48 @@ footer-about {
     text-align: center;
     margin-top: 20px;
 }
+
+/* ---- Styling on media ----- */
+.media-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 30px;
+}
+
+.media-section h{
+font-size: 2rem;
+}
+
+.media-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.media-item l {
+  color: #ffffff;
+  font-size: 0rem;
+}
+
+.media-item {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #345830;
+  font-family: 'bely', serif;
+}
+
+.media-item h2 {
+  font-size: 28px;
+  color: rgb(159, 90, 0);
+}
+
+.media-item a {
+  color: #345830;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.wistia_responsive_padding {
+  max-width: 100%;
+}
