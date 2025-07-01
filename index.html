@@ -16,7 +16,7 @@
             <div class="left">
                 <a href="index.html" class="home-link">Ivionna Jordan</a>
             </div>
-            <div class="right"> </div>
+            <div class="right"></div>
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="project.html">Projects</a></li>
@@ -46,25 +46,10 @@
         </section>
         <hr>
     </main>
-</body>
 
-
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <url></url>
-
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['a database developer.', 'an UI designer.', 'a frontend developer.', 'a computer science and design student.'],
-            typeSpeed: 50,
-        });
-    </script>
-
-</body>
-
-<body>
     <footer>
         <nav>
-            <div class="footer">
+            <div class="footer-about">
                 <p>ⓒ 2024 Ivionna Jordan — powered by Red Bull and hard work  ⊹⚡️🏎️</p>
             </div>
             <div class="right">
@@ -85,27 +70,20 @@
                 </a>
             </div>
         </nav>
-    </footer> 
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['a database developer.', 'an UI designer.', 'a frontend developer.', 'a computer science and design student.'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('header').classList.add('loaded');
+        });
+    </script>
 </body>
 
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-
-<script>
-    window.addEventListener('load', function () {
-        document.querySelector('header').classList.add('loaded');
-    });
-</script>
 </html>
